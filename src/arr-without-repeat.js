@@ -18,3 +18,23 @@ function withoutRepeat(data) {
 }
 
 console.log(withoutRepeat(arr));
+
+let arr = [1, 2, 2, 3, 4, 4, 5];
+
+function withoutRepeat2(data) {
+  let resultArr = [];
+  const obj = {};
+  for (let i = 0; i < data.length; i++) {
+    let currentItem = data[i];
+    if (!(currentItem in obj)) {
+      obj[currentItem] = 1;
+    } else {
+      obj[currentItem] += 1;
+    }
+  }
+  const keys = Object.keys(obj);
+  keys.forEach(if(obj[keys] === )
+}
+
+console.log(withoutRepeat2(arr));
+

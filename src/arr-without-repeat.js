@@ -19,8 +19,6 @@ function withoutRepeat(data) {
 
 console.log(withoutRepeat(arr));
 
-let arr = [1, 2, 2, 3, 4, 4, 5];
-
 function withoutRepeat2(data) {
   let resultArr = [];
   const obj = {};
@@ -33,7 +31,12 @@ function withoutRepeat2(data) {
     }
   }
   const keys = Object.keys(obj);
-  keys.forEach(if(obj[keys] === )
+  keys.forEach((keys) => {
+    if (obj[keys] === 1) {
+      resultArr.push(keys);
+    }
+  });
+  return resultArr;
 }
 
 console.log(withoutRepeat2(arr));

@@ -1,0 +1,19 @@
+let arr = ["banana", "orange", "apple", "orange", "banana", "banana"];
+
+function sortRepeatWord(data) {
+  let occurrences = data.reduce((acc, word) => {
+  // acc[word] = (acc[word] || 0) + 1;
+    if (word in acc) {
+      acc[word] = acc[word] + 1;
+    } else {
+      acc[word] = 1;
+    }
+    return acc;
+  }, {});
+  let keys = Object.keys(occurrences);
+  return keys.sort((a, b) => {
+    occurrences[b] - occurrences[a];
+  });
+}
+
+console.log(sortRepeatWord(arr));
